@@ -1,0 +1,2 @@
+# El harness se reparte tal cual sale de git: con CRLF todos los archivos parecerían modificados.
+* text=auto eol=lf

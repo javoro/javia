@@ -1,0 +1,37 @@
+{
+  "name": "javia-instalador",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Instalador de JavIA: el harness de desarrollo de Javi para tu asistente de IA",
+  "author": "Javier Orona",
+  "main": "out/main/index.js",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "check": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\"",
+    "e2e": "npm run build && node generar-paquete.mjs && playwright test",
+    "verificar": "npm run check && npm test && npm run build",
+    "dist": "npm run build && electron-builder --publish never && node generar-paquete.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

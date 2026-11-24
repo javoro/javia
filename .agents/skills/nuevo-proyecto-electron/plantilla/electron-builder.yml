@@ -1,0 +1,24 @@
+appId: com.ejemplo.miapp
+productName: Mi App
+directories:
+  output: release
+  buildResources: build
+# Todo va compilado en out/; node_modules no entra porque las dependencias se empaquetan con Vite.
+files:
+  - out/**/*
+# Sin esto, la variable ELECTRON_RUN_AS_NODE arrancaría Node en vez de la app instalada.
+electronFuses:
+  runAsNode: false
+  onlyLoadAppFromAsar: true
+win:
+  target: nsis
+  artifactName: ${name}-${version}-setup.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+mac:
+  target: dmg
+linux:
+  target: AppImage

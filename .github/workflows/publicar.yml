@@ -1,0 +1,29 @@
+# Publica una versión de JavIA. Para publicar:
+#   1. Agrega al inicio de novedades.json la versión nueva, con cada cambio y para qué sirve.
+#   2. Si cambió el instalador, sube también la versión de instalador/package.json.
+#   3. Sube a master y después la etiqueta: git tag vX.Y.Z && git push origin vX.Y.Z
+# Los instaladores ya repartidos descargan harness.json del release más reciente.
+name: Publicar
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: instalador
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run verificar
+      - run: npm run dist
+      - run: gh release create "$GITHUB_REF_NAME" release/*.exe release/harness.json --verify-tag --title "JavIA $GITHUB_REF_NAME" --notes-file release/notas.md
+        env:
+          GH_TOKEN: ${{ github.token }}

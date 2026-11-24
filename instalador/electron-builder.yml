@@ -1,0 +1,20 @@
+appId: com.javia.instalador
+productName: JavIA
+directories:
+  output: release
+  buildResources: build
+# El harness no viaja en el exe: se descarga del release más reciente (servicios/github.ts).
+files:
+  - out/**/*
+# Sin esto, la variable ELECTRON_RUN_AS_NODE arrancaría Node en vez de la app.
+electronFuses:
+  runAsNode: false
+  onlyLoadAppFromAsar: true
+# portable: un solo .exe que se abre con doble clic, sin instalarse.
+win:
+  target: portable
+  artifactName: JavIA-Instalador-${version}.${ext}
+mac:
+  target: dmg
+linux:
+  target: AppImage

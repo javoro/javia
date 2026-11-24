@@ -1,0 +1,16 @@
+[
+  {
+    "version": "1.1.0",
+    "fecha": "2026-11-24",
+    "cambios": [
+      {
+        "que": "JavIA se actualiza desde GitHub",
+        "paraQue": "Al abrir el instalador ves qué hay nuevo y decides si lo descargas. Ya no hace falta que te manden un archivo nuevo."
+      },
+      {
+        "que": "Respaldo automático al actualizar",
+        "paraQue": "Si tú o tu asistente cambiaron una instrucción de JavIA, se guarda una copia antes de poner la versión nueva. Tu memoria y tus proyectos no se tocan."
+      }
+    ]
+  }
+]

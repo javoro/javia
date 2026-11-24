@@ -1,0 +1,16 @@
+# Cada app es su propio repositorio
+/proyectos/
+
+# Enlaces generados por scripts/preparar-entorno.mjs
+/.claude/
+
+# Skill externa: la instala scripts/preparar-entorno.mjs
+/.agents/skills/impeccable/
+
+# Copias que deja el instalador al actualizar
+/.javia-respaldo/
+
+# Secretos y archivos locales
+.env
+*-variables.txt
+node_modules/
