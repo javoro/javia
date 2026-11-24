@@ -198,3 +198,14 @@ test('un registro alterado no puede retirar archivos fuera de la carpeta', () =>
 
   assert.ok(existsSync(join(raiz, 'ajeno.txt')));
 });
+
+test('una nota de memoria borrada no reaparece al agregar un asistente ni al actualizar', () => {
+  const destino = temporal();
+  const conNota = paquete('1.0.0', { ...V1.archivos, 'memoria/nota.md': 'hola' });
+  instalar(destino, ['codex'], conNota);
+  rmSync(join(destino, 'memoria/nota.md'));
+  instalar(destino, ['gemini'], conNota);
+  actualizar(destino, paquete('2.0.0', { ...V2.archivos, 'memoria/nota.md': 'hola' }));
+
+  assert.ok(!existsSync(join(destino, 'memoria/nota.md')));
+});

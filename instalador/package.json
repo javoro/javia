@@ -1,6 +1,6 @@
 {
   "name": "javia-instalador",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "type": "module",
   "description": "Instalador de JavIA: el harness de desarrollo de Javi para tu asistente de IA",

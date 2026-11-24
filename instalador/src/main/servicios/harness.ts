@@ -165,6 +165,7 @@ export function instalar(destino: string, ids: IdProveedor[], paquete: Paquete):
 
   for (const [rel, contenido] of Object.entries(paquete.archivos)) {
     const exclusivoDe = EXCLUSIVOS[rel];
+    if (rel.startsWith('memoria/') && registro?.huellas[rel] && !existsSync(join(destino, rel))) continue; // se borró a propósito
     if (!exclusivoDe || ids.includes(exclusivoDe)) escribir(rel, contenido);
   }
   for (const proveedor of PROVEEDORES) {

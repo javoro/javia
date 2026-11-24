@@ -6,7 +6,7 @@ import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'n
 import { fileURLToPath } from 'node:url';
 
 const raiz = fileURLToPath(new URL('../', import.meta.url));
-const INCLUIR = ['AGENTS.md', 'CLAUDE.md', 'LEEME.md', '.gitignore', 'scripts', 'memoria/Indice.md', '.agents'];
+const INCLUIR = ['AGENTS.md', 'CLAUDE.md', 'LEEME.md', '.gitignore', 'scripts', 'memoria/Indice.md', 'memoria/nota-de-javi.md', '.agents'];
 // Las skills externas las instala scripts/preparar-entorno.mjs en el equipo destino.
 const OMITIR = ['.agents/skills/impeccable'];
 

@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.2.1",
+    "fecha": "2026-11-24",
+    "cambios": [
+      {
+        "que": "Nota de bienvenida",
+        "paraQue": "Recibirte la primera vez que uses tu carpeta de JavIA."
+      },
+      {
+        "que": "Lo que borras de tu memoria no reaparece",
+        "paraQue": "Agregar otro asistente o actualizar ya no vuelve a crear notas que se quitaron."
+      }
+    ]
+  },
+  {
     "version": "1.2.0",
     "fecha": "2026-11-24",
     "cambios": [

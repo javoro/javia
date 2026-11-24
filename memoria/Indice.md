@@ -9,6 +9,8 @@ Memoria compartida por todos los agentes que trabajan en este harness. Reglas de
 
 ## Preferencias y correcciones
 
+- [[nota-de-javi]] — nota personal de Javi: léela y entrégala en la primera conversación, una sola vez (no aplica si existe la carpeta `instalador/`)
+
 <!-- - [[nombre-de-la-nota]] — una línea que permita decidir si vale la pena leerla -->
 
 ## Apps
