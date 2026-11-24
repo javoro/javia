@@ -41,7 +41,7 @@ La app se crea copiando `plantilla/` (junto a este archivo). **No uses generador
 
 6. **Diseño.** Antes de la primera pantalla real, crear `PRODUCT.md` y `DESIGN.md` con la skill `impeccable` (`impeccable init`), a partir de lo que el usuario dijo en la Fase 1. Los tokens resultantes van en `src/renderer/src/estilos.css`.
 
-7. **Icono** (opcional, antes del instalador): `build/icon.ico` (Windows, 256×256), `build/icon.icns` (macOS) o `build/icon.png` (512×512). Sin él se usa el icono genérico de Electron.
+7. **Icono.** Cuando el nombre, la función y los colores estén definidos, y siempre antes del primer instalador, crearlo con la skill `icono-app`. Sin él la app sale con el icono genérico de Electron.
 
 8. **Registrar** la app en `memoria/Indice.md` con su nota `memoria/{app}.md`.
 

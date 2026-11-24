@@ -88,6 +88,7 @@ Una skill es un procedimiento paso a paso. Antes de hacer algo que una skill cub
 | `preparar-entorno` | Primer uso en un equipo, o falta una herramienta |
 | `nuevo-proyecto-electron` | La app todavía no existe en `proyectos/` (incluye la plantilla) |
 | `documentar-proyecto` | Al cerrar cualquier cambio técnico o de reglas de negocio |
+| `icono-app` | Crear o cambiar el icono de una app; toda app nueva, antes de su primer instalador |
 | `empaquetar-app` | Generar el instalador, verificarlo, publicar actualizaciones |
 | `impeccable` (externa) | Todo trabajo de interfaz: definir el diseño (`init`), planear una pantalla (`shape`), pulirla (`polish`), auditarla (`audit`) |
 
@@ -173,7 +174,7 @@ scripts/preparar-entorno.mjs
 ├── roles/                arquitecto · desarrollador · revisor · qa · documentador
 ├── reglas/               electron · interfaz · configuracion
 └── skills/               nuevo-pendiente · preparar-entorno · nuevo-proyecto-electron (+ plantilla)
-                          documentar-proyecto · empaquetar-app · impeccable (externa)
+                          documentar-proyecto · icono-app · empaquetar-app · impeccable (externa)
 .claude/                  generado por el script: enlaces a .agents/ para Claude Code (no editar)
 memoria/                  Indice.md + una nota por app
 proyectos/                una carpeta por app (cada una con su propio git)

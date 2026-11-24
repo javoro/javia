@@ -89,7 +89,7 @@ Lanzar `documentador` con la app, la lista real de archivos cambiados y las ruta
 
 ## Fase 9 — Instalador (previa pregunta)
 
-**Preguntar al usuario** si desea generar el instalador ahora. Si acepta, seguir la skill `empaquetar-app`, **instalarlo y abrir la app instalada** antes de entregarlo (lo que funciona en desarrollo puede fallar empaquetado).
+**Preguntar al usuario** si desea generar el instalador ahora. Si acepta y la app no tiene `build/icon.png`, primero la skill `icono-app`; después, seguir la skill `empaquetar-app`, **instalarlo y abrir la app instalada** antes de entregarlo (lo que funciona en desarrollo puede fallar empaquetado).
 
 ## Fase 10 — Cierre (PM)
 

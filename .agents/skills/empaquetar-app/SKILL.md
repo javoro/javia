@@ -12,7 +12,7 @@ Todo se corre dentro de `proyectos/{app}/`.
 - `npm run verificar` y `npm run e2e` en verde.
 - `electron-builder.yml` tiene el `appId` y el `productName` definitivos. **El `appId` no se cambia después de la primera entrega**: Windows trataría la app como otra distinta.
 - Subir la versión en `package.json` (`npm version patch --no-git-tag-version`; `minor` si hay funciones nuevas). Nunca entregar dos instaladores distintos con la misma versión.
-- Icono en `build/` si el usuario dio uno.
+- Icono en `build/icon.png`. Si falta, créalo antes con la skill `icono-app`.
 - Las librerías que usa el **renderer** van en `devDependencies` (Vite ya las mete en el compilado); en `dependencies` solo lo que `main` carga al ejecutarse. Lo que esté de más en `dependencies` engorda el instalador.
 
 ## 2. Generar
@@ -23,7 +23,7 @@ npm run dist
 
 Resultado en `release/`: `{name}-{versión}-setup.exe` en Windows (`.dmg` en macOS, `.AppImage` en Linux) y la carpeta `win-unpacked/` con la app sin instalar. **Solo se genera el instalador del sistema operativo donde se corre**; para otro sistema hay que correrlo en ese sistema.
 
-Los avisos "default Electron icon is used" y "no code signing certificate" son normales si no hay icono ni certificado.
+El aviso "no code signing certificate" es normal sin certificado. "default Electron icon is used" no: falta el icono (skill `icono-app`).
 
 ## 3. Verificar la app empaquetada (obligatorio)
 

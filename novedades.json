@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.2.0",
+    "fecha": "2026-11-24",
+    "cambios": [
+      {
+        "que": "Skill icono-app",
+        "paraQue": "Tu asistente dibuja el icono de cada app según su nombre y lo que hace, te enseña propuestas para que elijas y lo deja puesto en el programa."
+      },
+      {
+        "que": "El instalador de JavIA ya tiene su icono",
+        "paraQue": "Reconocerlo de un vistazo en tu escritorio y en la barra de tareas."
+      }
+    ]
+  },
+  {
     "version": "1.1.0",
     "fecha": "2026-11-24",
     "cambios": [
